@@ -9,7 +9,7 @@
 
 import { ButtonOutline } from './Button';
 
-import CV from '../components/BraulioStefanoEnglishCV.pdf';
+import CV from '../components/CV.pdf';
 
 const Hero = () => {
   return (
