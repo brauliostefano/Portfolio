@@ -2,53 +2,52 @@
  * @copyright 2024 Braulio Stefano
  * @license Apache-2.0
  */
-
-/**
- * Compoonents
- */
-
 import ProjectCard from './ProjectCard';
 
 const works = [
   {
-    imgSrc: '/images/projectGradient1.jpg',
+    imgSrc: '/images/LidApp1.png',
     title: 'Lid App',
-    tags: ['React js', 'Web3.js', 'IPFS', 'MetaMask'],
-    projectLink: 'https://app.eno.network/',
+    tags: ['React js', 'Web3.js', 'NextJS', 'Base', 'Privy', 'TailwindCSS'],
+    projectLink: 'https://alpha.lid.pro/',
   },
   {
-    imgSrc: '/images/projectGradient2.jpg',
+    imgSrc: '/images/LidSite1.png',
+    title: 'Lid Site',
+    tags: ['Web Design', 'React.js', 'NextJS', 'TailwindCSS', 'Vercel'],
+    projectLink: 'https://lid.pro/',
+  },
+  {
+    imgSrc: '/images/LidBlog1.png',
+    title: 'Lid Blog',
+    tags: ['Web Design', 'React.js', 'NextJS', 'TailwindCSS', 'Vercel'],
+    projectLink: 'https://blog.lid.pro/',
+  },
+  {
+    imgSrc: '/images/STMPDRCRDS.png',
     title: 'STMPD Studios',
     tags: ['React.js', 'Headless CMS', 'AWS'],
     projectLink: 'https://www.stmpdstudios.com/',
   },
   {
-    imgSrc: '/images/projectGradient3.jpg',
-    title: 'ENO Network',
-    tags: ['Web-design', 'React.js'],
-    projectLink: 'https://eno.network/',
+    imgSrc: '/images/LogoSanfer.png',
+    title: 'Sanfer Labs',
+    tags: ['React.js', 'CSS', 'Azure', 'JavaScript'],
+    projectLink: 'https://sanfer.com.mx/',
   },
   {
-    imgSrc: '/images/projectGradient4.jpg',
-    title: 'Ting',
-    tags: ['vue.js', 'animate.js', 'Azure'],
-    projectLink: 'https://ting.com.mx/',
-  },
-  {
-    imgSrc: '/images/projectGradient5.jpg',
+    imgSrc: '/images/Irix.png',
     title: 'Irix Gotas',
-    tags: ['Web-design', 'React.js', 'vue.js'],
+    tags: ['Web Design', 'React.js', 'vue.js', 'Azure', 'CSS'],
     projectLink: 'https://irixgotas.com.ar/',
   },
   {
-    imgSrc: '/images/projectGradient6.jpg',
-    title: 'Blog Eno',
-    tags: ['Web-design', 'React.js'],
-    projectLink: 'https://blog.eno.network/',
+    imgSrc: '/images/Ting1.png',
+    title: 'Ting',
+    tags: ['vue.js', 'animate.js', 'Azure', 'CSS'],
+    projectLink: 'https://ting.com.mx/',
   },
 ];
-
-import React from 'react';
 
 const Work = () => {
   return (
