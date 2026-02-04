@@ -9,7 +9,7 @@ const works = [
     imgSrc: '/images/LidApp1.png',
     title: 'Lid App',
     tags: ['React js', 'Web3.js', 'NextJS', 'Base', 'Privy', 'TailwindCSS'],
-    projectLink: 'https://alpha.lid.pro/',
+    projectLink: 'https://app.lid.pro/',
   },
   {
     imgSrc: '/images/LidSite1.png',
