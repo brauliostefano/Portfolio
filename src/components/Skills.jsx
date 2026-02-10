@@ -12,63 +12,60 @@ import SkillsCard from './SkillsCard';
 const skillItem = [
   // --- TIER 1: The Heavy Hitters (Arquitectura) ---
   {
-    imgSrc: '/images/next.svg',
+    imgSrc: '/images/skills/next.svg',
     label: 'Next.js',
     desc: 'App Architecture',
   },
   {
-    imgSrc: '/images/Typescript.svg',
+    imgSrc: '/images/skills/Typescript.svg',
     label: 'TypeScript',
     desc: 'Type Safety',
   },
   {
-    imgSrc: '/images/openai.svg',
+    imgSrc: '/images/skills/openai.svg',
     label: 'OpenAI API',
     desc: 'LLM Integration',
   },
 
-  // --- TIER 2: The Core Stack (Full Stack) ---
   {
-    imgSrc: '/images/react.svg',
+    imgSrc: '/images/skills/react.svg',
     label: 'React',
     desc: 'UI Library',
   },
   {
-    imgSrc: '/images/nodejs.svg',
+    imgSrc: '/images/skills/nodejs.svg',
     label: 'Node.js',
     desc: 'Backend Runtime',
   },
   {
-    imgSrc: '/images/cloudflare.svg',
+    imgSrc: '/images/skills/cloudflare.svg',
     label: 'Cloudflare',
     desc: 'Edge & Security',
   },
 
-  // --- TIER 3: Web3 & Data (Especialización) ---
   {
-    imgSrc: '/images/Ethereum.svg',
+    imgSrc: '/images/skills/Ethereum.svg',
     label: 'Ethereum',
     desc: 'EVM Architecture',
   },
   {
-    imgSrc: '/images/mongodb.svg',
+    imgSrc: '/images/skills/mongodb.svg',
     label: 'MongoDB',
     desc: 'Scalable Database',
   },
 
-  // --- TIER 4: Tools & Design (Soporte) ---
   {
-    imgSrc: '/images/tailwindcss.svg',
+    imgSrc: '/images/skills/tailwindcss.svg',
     label: 'TailwindCSS',
     desc: 'Design System',
   },
   {
-    imgSrc: '/images/figma.svg',
+    imgSrc: '/images/skills/figma.svg',
     label: 'Figma',
     desc: 'UI/UX Design',
   },
   {
-    imgSrc: '/images/adobe.svg', // ¡NUEVO! Cubre Premiere, PS, Lightroom
+    imgSrc: '/images/skills/adobe.svg',
     label: 'Adobe CC',
     desc: 'Multimedia Creation',
   },
