@@ -18,12 +18,6 @@ const works = [
     projectLink: 'https://lid.pro/',
   },
   {
-    imgSrc: '/images/LidBlog1.png',
-    title: 'Lid Blog',
-    tags: ['Web Design', 'React.js', 'NextJS', 'TailwindCSS', 'Vercel'],
-    projectLink: 'https://blog.lid.pro/',
-  },
-  {
     imgSrc: '/images/STMPDRCRDS.png',
     title: 'STMPD Studios',
     tags: ['React.js', 'Headless CMS', 'AWS'],

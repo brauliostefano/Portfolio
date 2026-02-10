@@ -46,18 +46,50 @@ const Hero = () => {
               Available for work
             </div>
           </div>
-          <h2
-            className="headline-1 max-w-[15ch] sm:max-w-
-                    [20ch] lg:max-w-[25ch] mt-5 mb-8 lg:mb-10"
-          >
-            I&apos;m Braulio Stefano
-            <span className="flex items-center gap-1.5 text-zinc-400 text-sm tracking-wide">
-              My portfolio showcases my passion for web development. Each
-              project has taught me valuable lessons, allowing me to offer
-              innovative and efficient solutions, leading to both personal and
-              professional growth.
-            </span>
+
+          {/* TÍTULO PRINCIPAL: Directo y Senior */}
+          <h2 className="headline-1 max-w-[20ch] sm:max-w-[25ch] lg:max-w-[30ch] mt-5 mb-4 text-zinc-50">
+            Full Stack Engineer
           </h2>
+
+          {/* SUBTÍTULO: Tu propuesta de valor "Pitch" */}
+          <p className="text-zinc-400 text-lg leading-relaxed mb-8 lg:mb-10 max-w-[50ch]">
+            Specialized in building scalable ecosystems, high-performance UIs,
+            and decentralized applications for global brands like{' '}
+            <strong className="text-zinc-200 font-medium">
+              <a
+                href="https://sanfer.com.mx/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="transition-colors duration-300 hover:text-emerald-400 cursor-pointer"
+              >
+                Sanfer
+              </a>
+            </strong>
+            ,
+            <strong className="text-zinc-200 font-medium ml-1">
+              <a
+                href="https://app.lid.pro/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="transition-colors duration-300 hover:text-emerald-400 cursor-pointer"
+              >
+                Lid
+              </a>
+            </strong>
+            , and
+            <strong className="text-zinc-200 font-medium ml-1">
+              <a
+                href="https://martingarrix.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="transition-colors duration-300 hover:text-emerald-400 cursor-pointer"
+              >
+                Martin Garrix
+              </a>
+            </strong>
+            .
+          </p>
 
           <div className="flex items-center gap-3">
             <a

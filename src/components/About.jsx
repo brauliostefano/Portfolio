@@ -5,12 +5,12 @@
 
 const aboutItems = [
   {
-    label: 'Projects done',
-    number: 36,
+    label: 'Global Projects', // Suena más internacional que "Projects done"
+    number: 30, // Alineado con tu CV ("30+ solutions")
   },
   {
-    label: 'Years of experience',
-    number: 4,
+    label: 'Years of Experience',
+    number: 6, // Alineado con tu CV (2018-Presente)
   },
 ];
 
@@ -19,11 +19,17 @@ const About = () => {
     <section id="about" className="section">
       <div className="container">
         <div className="bg-zinc-800/50 p-7 rounded-2xl md:p-12 reveal-up">
-          <p className="text-zinc-300 mb-4 md:mb-8 md:text-xl md:max-w-[60ch]">
-            Welcome! I&apos;m Stefano, a web developer with a knack for crafting
-            visually stunning and highly functional websites. Combining
-            creativity and technical expertise. I transform your vision into
-            digital masterpiece that excels in both appearance and performance.
+          <p className="text-zinc-300 mb-4 md:mb-8 md:text-xl md:max-w-[90ch] text-justify">
+            Welcome! I&apos;m Braulio, a{' '}
+            <span className="text-zinc-100 font-medium">
+              Senior Full Stack Engineer
+            </span>{' '}
+            dedicated to building robust, scalable digital ecosystems.
+            Specializing in the JavaScript Ecosystem (React, Next.js, Node.js) ,
+            I engineer robust applications for global brands. My focus is on
+            transforming complex requirements into high speed digital
+            experiences, whether for massive enterprise platforms or modern Web3
+            integrations.
           </p>
 
           <div className="flex flex-wrap items-center gap-4 md:gap-7">
