@@ -8,7 +8,6 @@ const works = [
   {
     imgSrc: '/images/projects/LaCotorrisa.png',
     title: 'La Cotorrisa',
-    // EL TRUCO: Al decir "Construction", se activará el pulse verde automáticamente
     tags: ['🎨 View Figma Workflow'],
     status: 'underconstruction',
     projectLink:
@@ -69,7 +68,7 @@ const works = [
     projectLink: 'https://irixgotas.com.ar/',
   },
   {
-    imgSrc: '/images/projects/AgaveAzul1.png',
+    imgSrc: '/images/projects/AgaveAzul.png',
     title: 'Destileria Agave Azul',
     tags: ['Vercel', 'Vue.js', 'Cloudflare', 'Multilingual', 'Headless CMS'],
     projectLink: 'https://destiladoraagaveazul.mx/en/',
