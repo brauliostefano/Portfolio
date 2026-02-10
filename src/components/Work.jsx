@@ -6,40 +6,73 @@ import ProjectCard from './ProjectCard';
 
 const works = [
   {
-    imgSrc: '/images/LidApp1.png',
-    title: 'Lid App',
-    tags: ['React js', 'Web3.js', 'NextJS', 'Base', 'Privy', 'TailwindCSS'],
+    imgSrc: '/images/projects/LaCotorrisa.png',
+    title: 'La Cotorrisa',
+    // EL TRUCO: Al decir "Construction", se activará el pulse verde automáticamente
+    tags: ['🎨 View Figma Workflow'],
+    status: 'underconstruction',
+    projectLink:
+      'https://www.figma.com/proto/Q4SiXbrRUkgnMX0H7OUKgB/figmaaa?node-id=155-431&p=f&t=p3iTd6BjGgVH4gPW-0&scaling=min-zoom&content-scaling=fixed&page-id=0%3A1&starting-point-node-id=155%3A431',
+  },
+
+  // --- TIER 1: The "Wow" Factor (Web3 & International Music) ---
+  {
+    imgSrc: '/images/projects/LidApp.png',
+    title: 'Lid dApp',
+    tags: ['Web3', 'Base L2', 'Next.js', 'Privy Auth', 'Wagmi'],
     projectLink: 'https://app.lid.pro/',
   },
   {
-    imgSrc: '/images/LidSite1.png',
-    title: 'Lid Site',
-    tags: ['Web Design', 'React.js', 'NextJS', 'TailwindCSS', 'Vercel'],
-    projectLink: 'https://lid.pro/',
+    imgSrc: '/images/projects/martingarrix1.png',
+    title: 'Martin Garrix Website',
+    tags: ['High Traffic', 'React', 'AWS', 'Multimedia', 'GSAP'],
+    projectLink: 'https://martingarrix.com/',
   },
   {
-    imgSrc: '/images/STMPDRCRDS.png',
-    title: 'STMPD Studios',
-    tags: ['React.js', 'Headless CMS', 'AWS'],
+    imgSrc: '/images/projects/STMPDRCRDS.png',
+    title: 'STMPD RCRDS Studios',
+    tags: ['React', 'Headless CMS', 'AWS', 'Framer Motion'],
     projectLink: 'https://www.stmpdstudios.com/',
   },
+
+  // --- TIER 2: Enterprise & Scalable Architectures ---
   {
-    imgSrc: '/images/LogoSanfer.png',
-    title: 'Sanfer Labs',
-    tags: ['React.js', 'CSS', 'Azure', 'JavaScript'],
+    imgSrc: '/images/projects/LogoSanfer.png',
+    title: 'Sanfer Labs Ecosystem',
+    tags: ['React', 'Azure DevOps', 'Docker'],
     projectLink: 'https://sanfer.com.mx/',
   },
   {
-    imgSrc: '/images/Irix.png',
+    imgSrc: '/images/projects/LidSite.png',
+    title: 'Lid Landing',
+    tags: ['Brand Identity', 'Next.js', 'TailwindCSS', 'Vercel'],
+    projectLink: 'https://lid.pro/',
+  },
+  {
+    imgSrc: '/images/projects/TecnologicoDeMonterrey.png',
+    title: 'Tecnológico de Monterrey',
+    tags: ['Refactoring', 'Performance', 'Technical Debt', 'EdTech'],
+    projectLink: 'https://tec.mx/', // Corregido: Antes llevaba a Agave Azul
+  },
+
+  // --- TIER 3: Consumer Brands & High Visual Impact ---
+  {
+    imgSrc: '/images/projects/Ting.png',
+    title: 'Ting',
+    tags: ['Vue.js', 'Interactive UI', 'Azure', 'Motion'],
+    projectLink: 'https://ting.com.mx/',
+  },
+  {
+    imgSrc: '/images/projects/Irix.png',
     title: 'Irix Gotas',
-    tags: ['Web Design', 'React.js', 'vue.js', 'Azure', 'CSS'],
+    tags: ['Cloudflare', 'Vue.js', 'Azure', 'SEO'],
     projectLink: 'https://irixgotas.com.ar/',
   },
   {
-    imgSrc: '/images/Ting1.png',
-    title: 'Ting',
-    tags: ['vue.js', 'animate.js', 'Azure', 'CSS'],
-    projectLink: 'https://ting.com.mx/',
+    imgSrc: '/images/projects/AgaveAzul1.png',
+    title: 'Destileria Agave Azul',
+    tags: ['Vercel', 'Vue.js', 'Cloudflare', 'Multilingual', 'Headless CMS'],
+    projectLink: 'https://destiladoraagaveazul.mx/en/',
   },
 ];
 
@@ -47,13 +80,14 @@ const Work = () => {
   return (
     <section id="work" className="section">
       <div className="container">
-        <h2 className="headline-2 mb-8 reveal-up">My Portfolio hightlights</h2>
+        <h2 className="headline-2 mb-8 reveal-up">My Portfolio Highlights</h2>
 
         <div className="grid gap-x-4 gap-y-5 grid-cols-[repeat(auto-fill,_minmax(280px,_1fr))]">
-          {works.map(({ imgSrc, title, tags, projectLink }, key) => (
+          {works.map(({ imgSrc, title, tags, projectLink, status }, key) => (
             <ProjectCard
               key={key}
               imgSrc={imgSrc}
+              status={status}
               title={title}
               tags={tags}
               projectLink={projectLink}

@@ -3,15 +3,9 @@
  * @license Apache-2.0
  */
 
-/**
- * Node Modules
- */
-
 import PropTypes from 'prop-types';
 
-// import React from 'react';
-
-const ProjectCard = ({ imgSrc, title, tags, projectLink, classes }) => {
+const ProjectCard = ({ imgSrc, title, tags, projectLink, classes, status }) => {
   return (
     <div
       className={
@@ -19,18 +13,30 @@ const ProjectCard = ({ imgSrc, title, tags, projectLink, classes }) => {
         classes
       }
     >
-      <figure className="img-box aspect-square rounded-lg mb-4 bg-white">
+      <figure className="img-box aspect-square rounded-lg mb-4 bg-white relative overflow-hidden">
         <img src={imgSrc} alt={title} loading="lazy" className="img-cover" />
+
+        {status && (
+          <div className="absolute top-3 right-3 bg-zinc-900/80 backdrop-blur-sm px-3 py-1.5 rounded-full flex items-center gap-2 border border-zinc-50/10 z-10 shadow-lg">
+            <span className="relative w-2 h-2 rounded-full bg-emerald-400 shrink-0">
+              <span className="absolute inset-0 rounded-full bg-emerald-400 animate-ping"></span>
+            </span>
+            <span className="text-xs font-medium text-zinc-200 tracking-wide">
+              {status}
+            </span>
+          </div>
+        )}
       </figure>
 
       <div className="flex items-center justify-between gap-4">
         <div>
           <h3 className="title-1 mb-3">{title}</h3>
+
           <div className="flex flex-wrap items-center gap-2">
             {tags.map((label, key) => (
               <span
                 key={key}
-                className="-8 text-sm text-zinc-400 bg-zinc-50/5 grid items-center px-3 rounded-lg"
+                className="h-8 text-sm text-zinc-400 bg-zinc-50/5 grid items-center px-3 rounded-lg"
               >
                 {label}
               </span>
@@ -38,17 +44,21 @@ const ProjectCard = ({ imgSrc, title, tags, projectLink, classes }) => {
           </div>
         </div>
 
-        <div className="w-11 h-11 rounded-lg grid place-items-center bg-sky-50 text-zinc-950 shrink-0">
-          <span
-            className="material-symbols-rounded text-[18px]"
-            aria-hidden="true"
-          >
-            arrow_outward
-          </span>
-        </div>
+        {projectLink && projectLink !== '#' ? (
+          <div className="w-11 h-11 rounded-lg grid place-items-center bg-sky-50 text-zinc-950 shrink-0">
+            <span
+              className="material-symbols-rounded text-[18px]"
+              aria-hidden="true"
+            >
+              arrow_outward
+            </span>
+          </div>
+        ) : null}
       </div>
 
-      <a href={projectLink} target="_blank" className="absolute inset-0"></a>
+      {projectLink && projectLink !== '#' && (
+        <a href={projectLink} target="_blank" className="absolute inset-0"></a>
+      )}
     </div>
   );
 };
@@ -59,5 +69,7 @@ ProjectCard.propTypes = {
   tags: PropTypes.arrayOf(PropTypes.string).isRequired,
   projectLink: PropTypes.string.isRequired,
   classes: PropTypes.string,
+  status: PropTypes.string,
 };
+
 export default ProjectCard;

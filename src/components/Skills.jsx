@@ -10,7 +10,6 @@
 import SkillsCard from './SkillsCard';
 
 const skillItem = [
-  // --- TIER 1: The Heavy Hitters (Arquitectura) ---
   {
     imgSrc: '/images/skills/next.svg',
     label: 'Next.js',

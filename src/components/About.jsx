@@ -5,12 +5,12 @@
 
 const aboutItems = [
   {
-    label: 'Global Projects', // Suena más internacional que "Projects done"
-    number: 30, // Alineado con tu CV ("30+ solutions")
+    label: 'Global Projects',
+    number: 22,
   },
   {
     label: 'Years of Experience',
-    number: 6, // Alineado con tu CV (2018-Presente)
+    number: 6,
   },
 ];
 
@@ -39,7 +39,7 @@ const About = () => {
                   <span className="text-2xl font-bold md:text-4xl">
                     {number}
                   </span>
-                  <span className="text-sky-400 font-semibold md:text-3xl">
+                  <span className="text-emerald-400 font-semibold md:text-3xl">
                     +
                   </span>
                 </div>
