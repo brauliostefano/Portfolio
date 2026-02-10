@@ -43,25 +43,16 @@ const Review = () => {
   useGSAP(() => {
     gsap.to(scrollContainer.current, {
       scrollTrigger: {
-        trigger: '#reviews', // El trigger es la sección padre
-        start: 'top bottom', // Empieza cuando entra en pantalla
-        end: 'bottom top', // Termina cuando sale
-        scrub: 1, // Suavizado de 1s
-        invalidateOnRefresh: true, // CLAVE: Recalcula si cambian el tamaño de la ventana
+        trigger: '#reviews',
+        start: 'top bottom',
+        end: 'bottom top',
+        scrub: 1,
+        invalidateOnRefresh: true,
       },
       x: () => {
-        // LÓGICA CORREGIDA:
-        // 1. Ancho total del contenido (scrollWidth)
-        // 2. Menos el ancho de la ventana (innerWidth)
-        // 3. Menos el espacio inicial a la izquierda (getBoundingClientRect().left)
-        // 4. Más un pequeño margen de seguridad de 20px para que no quede pegado al borde
-
         const width = scrollContainer.current.scrollWidth;
         const screen = window.innerWidth;
         const offsetLeft = scrollContainer.current.getBoundingClientRect().left;
-
-        // Si el contenido es más chico que la pantalla, no movemos nada (Math.min)
-        // El negativo (-) es porque queremos moverlo a la izquierda
         return -1 * (width - screen + offsetLeft + 20);
       },
       ease: 'none',
