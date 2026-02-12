@@ -1,81 +1,122 @@
+import { useState, useRef } from 'react';
 import { gsap } from 'gsap';
-import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { useGSAP } from '@gsap/react';
-import { useRef } from 'react';
 import ReviewCard from './ReviewCard';
 
-gsap.registerPlugin(useGSAP, ScrollTrigger);
+const ArrowLeft = () => (
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    height="24"
+    viewBox="0 -960 960 960"
+    width="24"
+    fill="currentColor"
+  >
+    <path d="M560-240 320-480l240-240 56 56-184 184 184 184-56 56Z" />
+  </svg>
+);
+
+const ArrowRight = () => (
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    height="24"
+    viewBox="0 -960 960 960"
+    width="24"
+    fill="currentColor"
+  >
+    <path d="M504-480 320-664l56-56 240 240-240 240-56-56 184-184Z" />
+  </svg>
+);
 
 const reviews = [
   {
     content:
-      "Braulio didn't just build a website; he architected our digital transformation. His implementation of a headless CMS and multi-language support was crucial for our expansion into the US market. The performance improvements directly impacted our user engagement.",
+      'Braulio didn’t just build us a website, he completely reshaped how we operate online. The move to a headless CMS and the multi-language setup made expanding into the US market feel seamless. We saw noticeable improvements in performance and user engagement almost immediately.',
     name: 'Eva Mireles',
     imgSrc: '/images/people/eva.jpg',
-    company: 'Marketing Lead at Destiladora Agave Azul',
+    company: 'Marketing Lead',
   },
   {
     content:
-      "Exceptional technical leadership. Braulio possesses a rare combination of architectural vision and hands-on engineering excellence. He was instrumental in optimizing Sanfer's internal ecosystems, translating complex enterprise requirements into scalable, secure solutions.",
+      'What really stands out about Braulio is his ability to think big while still caring about the smallest technical details. He helped us modernize and optimize critical internal systems, turning complex enterprise requirements into solutions that actually make our day-to-day work easier.',
     name: 'Fernando Gamallo',
     imgSrc: '/images/projects/LogoSanfer.png',
-    company: 'IT Director at Sanfer Labs',
+    company: 'IT Director',
   },
   {
     content:
-      'In the Web3 space, finding an engineer who understands both Smart Contract integration and high-end UX is rare. Braulio bridged the gap seamlessly. The stability of the Lid Protocol interface is largely due to his rigorous engineering standards.',
-    name: 'Lid Protocol Core Team',
+      'In Web3, it’s hard to find someone who truly understands both smart contract integrations and user experience. Braulio does. He brought stability and clarity to our platform, and his engineering discipline gave the entire team confidence in every release.',
+    name: 'Lid Protocol Team',
     imgSrc: '/images/reviews/lid.svg',
     company: 'DeFi Platform',
   },
   {
     content:
-      'Working with top-tier global artists requires zero margin for error. Braulio delivered a high-performance platform that handles massive traffic spikes during tour announcements without a glitch. A true technical partner for high-stakes projects.',
+      "When you're launching projects tied to major global artists, there’s no room for mistakes. Braulio built a platform that handles huge traffic spikes during announcements without breaking a sweat. Reliable, thoughtful, and always calm under pressure.",
     name: 'Confidential Project',
     imgSrc: '/images/reviews/martingarrix.png',
-    company: 'Global Music Label (STMPD RCRDS)',
+    company: 'STMPD RCRDS',
   },
 ];
 
 const Review = () => {
-  const scrollContainer = useRef(null);
+  const [currentIndex, setCurrentIndex] = useState(0);
+  const containerRef = useRef(null);
 
   useGSAP(() => {
-    gsap.to(scrollContainer.current, {
-      scrollTrigger: {
-        trigger: '#reviews',
-        start: 'top bottom',
-        end: 'bottom top',
-        scrub: 1,
-        invalidateOnRefresh: true,
-      },
-      x: () => {
-        const width = scrollContainer.current.scrollWidth;
-        const screen = window.innerWidth;
-        const offsetLeft = scrollContainer.current.getBoundingClientRect().left;
-        return -1 * (width - screen + offsetLeft + 20);
-      },
-      ease: 'none',
+    const cardWidth = 420;
+
+    gsap.to(containerRef.current, {
+      x: -(currentIndex * cardWidth),
+      duration: 0.5,
+      ease: 'power2.out',
     });
-  }, []);
+  }, [currentIndex]);
+
+  const nextSlide = () => {
+    setCurrentIndex((prev) => (prev === reviews.length - 1 ? 0 : prev + 1));
+  };
+
+  const prevSlide = () => {
+    setCurrentIndex((prev) => (prev === 0 ? reviews.length - 1 : prev - 1));
+  };
 
   return (
     <section id="reviews" className="section overflow-hidden">
-      <div className="container">
-        <h2 className="headline-2 mb-8 reveal-up">What people say</h2>
+      <div className="container mb-8">
+        <div className="flex items-center justify-between">
+          <h2 className="headline-2 reveal-up">What people say</h2>
+          <div className="flex gap-2">
+            <button
+              onClick={prevSlide}
+              className="p-3 rounded-xl bg-zinc-800 hover:bg-zinc-700 transition-colors active:scale-95 border border-zinc-700/50"
+            >
+              <ArrowLeft />
+            </button>
+            <button
+              onClick={nextSlide}
+              className="p-3 rounded-xl bg-zinc-800 hover:bg-zinc-700 transition-colors active:scale-95 border border-zinc-700/50"
+            >
+              <ArrowRight />
+            </button>
+          </div>
+        </div>
+      </div>
 
+      {/* 2. CARRUSEL FULL WIDTH (Fuera del container) */}
+      <div className="w-full overflow-hidden pl-4 md:pl-8">
         <div
-          ref={scrollContainer}
-          className="scrub-slide flex items-stretch gap-3 w-fit"
+          ref={containerRef}
+          className="flex gap-10 w-fit will-change-transform"
         >
           {reviews.map(({ content, name, imgSrc, company }, key) => (
-            <ReviewCard
-              key={key}
-              name={name}
-              imgSrc={imgSrc}
-              company={company}
-              content={content}
-            />
+            <div key={key} className="w-[320px] md:w-[400px] shrink-0">
+              <ReviewCard
+                name={name}
+                imgSrc={imgSrc}
+                company={company}
+                content={content}
+              />
+            </div>
           ))}
         </div>
       </div>

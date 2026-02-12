@@ -9,7 +9,7 @@ const works = [
     imgSrc: '/images/projects/LaCotorrisa.png',
     title: 'La Cotorrisa',
     tags: ['🎨 View Figma Workflow'],
-    status: 'underconstruction',
+    status: 'Under Construction',
     projectLink:
       'https://www.figma.com/proto/Q4SiXbrRUkgnMX0H7OUKgB/figmaaa?node-id=155-431&p=f&t=p3iTd6BjGgVH4gPW-0&scaling=min-zoom&content-scaling=fixed&page-id=0%3A1&starting-point-node-id=155%3A431',
   },
