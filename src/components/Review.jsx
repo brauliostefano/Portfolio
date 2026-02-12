@@ -30,21 +30,21 @@ const ArrowRight = () => (
 const reviews = [
   {
     content:
-      'Braulio didn’t just build us a website, he completely reshaped how we operate online. The move to a headless CMS and the multi-language setup made expanding into the US market feel seamless. We saw noticeable improvements in performance and user engagement almost immediately.',
+      'Managing this project meant dealing with some very outdated infrastructure that was holding the client back. Stefano took charge of the entire migration and moved everything to a modern setup that is fast and stable. He implemented the new content system and translation features perfectly and the client was extremely happy with the upgrade.',
     name: 'Eva Mireles',
     imgSrc: '/images/reviews/agaveazul2.svg',
     company: 'Marketing Lead',
   },
   {
     content:
-      'What really stands out about Braulio is his ability to think big while still caring about the smallest technical details. He helped us modernize and optimize critical internal systems, turning complex enterprise requirements into solutions that actually make our day-to-day work easier.',
+      'Leading the innovation team at Sanfer meant we had to modernize everything while keeping over ten applications running perfectly. Stefano was fundamental in helping us make that happen. He understood that we needed speed and stability and he delivered code that made our entire ecosystem faster. It is rare to find an engineer who understands the architecture as well as the details and Braulio has that balance perfectly.',
     name: 'Fernando Gamallo',
     imgSrc: '/images/reviews/sanfer2.svg',
     company: 'IT Director',
   },
   {
     content:
-      'In Web3, it’s hard to find someone who truly understands both smart contract integrations and user experience. Braulio does. He brought stability and clarity to our platform, and his engineering discipline gave the entire team confidence in every release.',
+      "Navigating the technical depths of Web3 is a journey I'm still on, so having Braulio translate raw code into a seamless user experience was invaluable. He brought stability where we needed it most. His structured approach didn't just fix bugs; it gave the whole team the peace of mind to keep pushing forward.",
     name: 'Lid Protocol Team',
     imgSrc: '/images/reviews/lid2.svg',
     company: 'DeFi Platform',
@@ -82,7 +82,6 @@ const Review = () => {
 
   return (
     <section id="reviews" className="section overflow-hidden">
-      |{' '}
       <div className="container mb-8">
         <div className="flex items-center justify-between">
           <h2 className="headline-2 reveal-up">What people say</h2>

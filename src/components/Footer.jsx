@@ -113,7 +113,8 @@ const Footer = () => {
           </a>
 
           <p className="text-zinc-500 text-sm reveal-up">
-            &copy; 2026 <span className="text-zinc-200">Braulio Stefano</span>
+            &copy; {new Date().getFullYear()}{' '}
+            <span className="text-zinc-200">Braulio Stefano</span>{' '}
           </p>
         </div>
       </div>
