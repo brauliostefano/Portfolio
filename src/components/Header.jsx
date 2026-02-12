@@ -21,7 +21,7 @@ const Header = () => {
         <h1>
           <a href="/" className="logo">
             <img
-              src="/favicon1.svg"
+              src="/favicon.svg"
               height={40}
               width={40}
               alt="Braulio Stefano"

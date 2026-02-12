@@ -49,7 +49,7 @@ const About = () => {
             ))}
 
             <img
-              src="/favicon1.svg"
+              src="/favicon.svg"
               alt="Logo"
               width={30}
               height={30}
