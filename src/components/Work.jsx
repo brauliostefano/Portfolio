@@ -54,6 +54,13 @@ const works = [
     projectLink: 'https://tec.mx/', // Corregido: Antes llevaba a Agave Azul
   },
 
+  {
+    imgSrc: '/images/projects/AgaveAzul.png',
+    title: 'Destileria Agave Azul',
+    tags: ['Vercel', 'Vue.js', 'Cloudflare', 'Multilingual', 'Headless CMS'],
+    projectLink: 'https://destiladoraagaveazul.mx/en/',
+  },
+
   // --- TIER 3: Consumer Brands & High Visual Impact ---
   {
     imgSrc: '/images/projects/Ting.png',
@@ -68,10 +75,10 @@ const works = [
     projectLink: 'https://irixgotas.com.ar/',
   },
   {
-    imgSrc: '/images/projects/AgaveAzul.png',
-    title: 'Destileria Agave Azul',
-    tags: ['Vercel', 'Vue.js', 'Cloudflare', 'Multilingual', 'Headless CMS'],
-    projectLink: 'https://destiladoraagaveazul.mx/en/',
+    imgSrc: '/images/projects/microdacyn.png',
+    title: 'Microdacyn',
+    tags: ['Cloudflare', 'Vue.js', 'Azure', 'SEO'],
+    projectLink: 'https://microdacyn.com.ar/',
   },
 ];
 
