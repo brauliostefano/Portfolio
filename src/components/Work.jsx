@@ -36,6 +36,19 @@ const works = [
 
   // --- TIER 2: Enterprise & Scalable Architectures ---
   {
+    imgSrc: '/images/projects/nexxus.png',
+    title: 'Nexxus Protocol',
+    tags: ['NextJS', 'TailwindCSS', 'Framer Motion', 'Vercel'],
+
+    projectLink: 'https://nexxusprotocol.netlify.app/',
+  },
+  {
+    imgSrc: '/images/projects/AgaveAzul.png',
+    title: 'Destileria Agave Azul',
+    tags: ['Vercel', 'Vue.js', 'Cloudflare', 'Multilingual', 'Headless CMS'],
+    projectLink: 'https://destiladoraagaveazul.mx/en/',
+  },
+  {
     imgSrc: '/images/projects/LogoSanfer.png',
     title: 'Sanfer Labs Ecosystem',
     tags: ['React', 'Azure DevOps', 'Docker'],
@@ -51,14 +64,7 @@ const works = [
     imgSrc: '/images/projects/TecnologicoDeMonterrey.png',
     title: 'Tecnológico de Monterrey',
     tags: ['Refactoring', 'Performance', 'Technical Debt', 'EdTech'],
-    projectLink: 'https://tec.mx/', // Corregido: Antes llevaba a Agave Azul
-  },
-
-  {
-    imgSrc: '/images/projects/AgaveAzul.png',
-    title: 'Destileria Agave Azul',
-    tags: ['Vercel', 'Vue.js', 'Cloudflare', 'Multilingual', 'Headless CMS'],
-    projectLink: 'https://destiladoraagaveazul.mx/en/',
+    projectLink: 'https://tec.mx/',
   },
 
   // --- TIER 3: Consumer Brands & High Visual Impact ---

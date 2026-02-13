@@ -7,8 +7,6 @@
  * Components
  */
 
-import { ButtonPrimary } from './Button';
-
 const sitemap = [
   {
     label: 'Home',
@@ -46,8 +44,6 @@ const socials = [
     href: 'https://codepen.io/brauliostefano/',
   },
 ];
-
-import React from 'react';
 
 const Footer = () => {
   return (
